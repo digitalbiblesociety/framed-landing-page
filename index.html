@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            width: 100%;
+            height: 100%;
+            background-color: #14532d; /* green-900 */
+        }
+
+        main {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            background-color: #166534; /* green-800 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        /* Sharp Colored Borders */
+        .border-left, .border-right {
+            position: fixed;
+            top: 0;
+            width: 7.5%; /* Width of the colored band */
+            height: 100%;
+            max-width:64px;
+            z-index: 1;
+        }
+
+        .border-left {
+            left: 0;
+            background: linear-gradient(to right, 
+                #4338CA 0%, #4338CA 4%,  /* Purple */
+                #A79529 4%, #A79529 10%,  /* Tan */
+                #BC2A1D 10%, #BC2A1D 17%,  /* Tan */
+                #facc15 17%, #facc15 83%,  /* Yellow-400 */
+                #BC2A1D 83%, #BC2A1D 89%,  /* Red */
+                #A79529 89%, #A79529 96%,  /* Tan */
+                #4338CA 96%, #4338CA 100%  /* Tan */
+            );
+        }
+
+        .border-right {
+            right: 0;
+            background: linear-gradient(to left, 
+                #4338CA 0%, #4338CA 4%,  /* Purple */
+                #A79529 4%, #A79529 10%,  /* Tan */
+                #BC2A1D 10%, #BC2A1D 17%,  /* Tan */
+                #facc15 17%, #facc15 83%,  /* Yellow-400 */
+                #BC2A1D 83%, #BC2A1D 89%,  /* Red */
+                #A79529 89%, #A79529 96%,  /* Tan */
+                #4338CA 96%, #4338CA 100%  /* Tan */
+            );
+        }
+
+        .border-top, .border-bottom {
+            position: fixed;
+            left: 0;
+            width: 100%;
+            height: 7.5vw; /* Height of the colored band */
+            max-height:64px;
+            z-index: 1;
+        }
+
+        .border-top {
+            top: 0;
+            background: linear-gradient(to bottom, 
+                #4338CA 0%, #4338CA 4%,  /* Purple */
+                #A79529 4%, #A79529 10%,  /* Tan */
+                #BC2A1D 10%, #BC2A1D 17%,  /* Tan */
+                #facc15 17%, #facc15 83%,  /* Yellow-400 */
+                #BC2A1D 83%, #BC2A1D 89%,  /* Red */
+                #A79529 89%, #A79529 96%,  /* Tan */
+                #4338CA 96%, #4338CA 100%  /* Tan */
+            );
+        }
+
+        .border-bottom {
+            bottom: 0;
+            background: linear-gradient(to top, 
+                #4338CA 0%, #4338CA 4%,  /* Purple */
+                #A79529 4%, #A79529 10%,  /* Tan */
+                #BC2A1D 10%, #BC2A1D 17%,  /* Tan */
+                #facc15 17%, #facc15 83%,  /* Yellow-400 */
+                #BC2A1D 83%, #BC2A1D 89%,  /* Red */
+                #A79529 89%, #A79529 96%,  /* Tan */
+                #4338CA 96%, #4338CA 100%  /* Tan */
+            );
+        }
+
+        .frame {
+            position: fixed;
+            width: 35vw; /* 15% of the viewport width to make it responsive */
+            height: 35vw; /* Keep it square and proportional to viewport width */
+            max-width: 300px; /* Set a maximum limit to prevent it from becoming too large */
+            max-height: 300px; /* Set a maximum limit to prevent it from becoming too large */
+            z-index: 2; /* Above the border bands */
+        }
+
+        /* Corner Frames with Rotation */
+        .frame_tl {
+            top: 0;
+            left: 0;
+            transform: rotate(0deg);
+        }
+
+        .frame_tr {
+            top: 0;
+            right: 0;
+            transform: rotate(90deg);
+        }
+
+        .frame_bl {
+            bottom: 0;
+            left: 0;
+            transform: rotate(270deg);
+        }
+
+        .frame_br {
+            bottom: 0;
+            right: 0;
+            transform: rotate(180deg);
+        }
+
+        h1 {
+            font-size: 5rem;
+        }
+
+        nav a {
+          display: block;
+          background-color:white;
+          color:black;
+          border-radius: 4px;
+          padding:4px;
+          margin:4px auto;
+          text-decoration: none;
+        }
+
+        @media only screen and (max-width: 600px) {
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        nav a {
+          padding:1px;
+          font-size:.7rem;
+        }
+
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <!-- Main content area -->
+        <div class="content">
+            <h1>حبيبي</h1>
+            <nav>
+              <a href="#bibles">الكتاب المقدس</a>
+              <a href="#audio-bibles">الكتب المقدسة الصوتية</a>
+              <a href="#films">الأفلام</a>
+            </nav>
+        </div>
+    </main>
+
+    <!-- Sharp Colored Borders -->
+    <div class="border-left"></div>
+    <div class="border-right"></div>
+    <div class="border-top"></div>
+    <div class="border-bottom"></div>
+
+    <!-- Frame Corners -->
+    <img class="frame frame_tl" src="frame_corner.svg" alt="Top Left Corner"/>
+    <img class="frame frame_tr" src="frame_corner.svg" alt="Top Right Corner"/>
+    <img class="frame frame_bl" src="frame_corner.svg" alt="Bottom Left Corner"/>
+    <img class="frame frame_br" src="frame_corner.svg" alt="Bottom Right Corner"/>
+</body>
+</html>
