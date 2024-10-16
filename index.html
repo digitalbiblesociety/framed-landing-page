@@ -32,6 +32,9 @@
             z-index: 10;
             text-align: center;
             color: #ffffff;
+
+            width:55%;
+            height:65%;
         }
 
         /* Sharp Colored Borders */
@@ -140,7 +143,8 @@
         }
 
         h1 {
-            font-size: 5rem;
+            display: block;
+            font-size: 3rem;
         }
 
         nav a {
@@ -148,49 +152,35 @@
           background-color:white;
           color:black;
           border-radius: 4px;
-          padding:4px;
+          padding:2px;
           margin:4px auto;
           text-decoration: none;
         }
 
-        @media only screen and (max-width: 600px) {
-
-        h1 {
-            font-size: 2rem;
+        nav a:hover {
+          background: #eee;
+          text-decoration: underline;
         }
-
-        nav a {
-          padding:1px;
-          font-size:.7rem;
-        }
-
-        }
-
     </style>
 </head>
 <body>
     <main>
-        <!-- Main content area -->
         <div class="content">
             <h1>حبيبي</h1>
             <nav>
-              <a href="#bibles">الكتاب المقدس</a>
-              <a href="#audio-bibles">الكتب المقدسة الصوتية</a>
-              <a href="#films">الأفلام</a>
+              <a href="https://libraries.dbs.org/PES/index.html">الكتاب المقدس</a>
+              <a href="https://libraries.dbs.org/PES/Audio/Bible/_/index.html">الكتب المقدسة الصوتية</a>
+              <a href="https://libraries.dbs.org/PES/Video/000_Movies/_/index.html">الأفلام</a>
             </nav>
         </div>
     </main>
-
-    <!-- Sharp Colored Borders -->
     <div class="border-left"></div>
     <div class="border-right"></div>
     <div class="border-top"></div>
     <div class="border-bottom"></div>
-
-    <!-- Frame Corners -->
-    <img class="frame frame_tl" src="frame_corner.svg" alt="Top Left Corner"/>
-    <img class="frame frame_tr" src="frame_corner.svg" alt="Top Right Corner"/>
-    <img class="frame frame_bl" src="frame_corner.svg" alt="Bottom Left Corner"/>
-    <img class="frame frame_br" src="frame_corner.svg" alt="Bottom Right Corner"/>
+    <img class="frame frame_tl" src="frame_corner.svg" alt="Top Left Corner" />
+    <img class="frame frame_tr" src="frame_corner.svg" alt="Top Right Corner" />
+    <img class="frame frame_bl" src="frame_corner.svg" alt="Bottom Left Corner" />
+    <img class="frame frame_br" src="frame_corner.svg" alt="Bottom Right Corner" />
 </body>
 </html>
